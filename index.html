@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merach - Home Gym Lifestyle · Back to Fitness</title>
+    <meta name="description" content="Born to break your gym walls, not build them. Transform your home into a fitness sanctuary with Merach premium home gym equipment.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #E8F4FF 0%, #030C3A 100%);
+            color: #030C3A;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #030C3A;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #030C3A;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #030C3A;
+        }
+
+        /* Hero Section with Video Background */
+        .hero-video {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #E8F4FF 0%, #030C3A 100%);
+        }
+
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .video-background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        .hero-overlay {
+            position: relative;
+            z-index: 3;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 108, 217, 0.15);
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .hero .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #E8F4FF, #030C3A);
+            color: #E8F4FF;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(232, 244, 255, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(3, 12, 58, 0.4);
+        }
+
+        /* Video Section */
+        .video-section {
+            padding: 80px 0;
+            background: #E8F4FF;
+        }
+
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 108, 217, 0.2);
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+        }
+
+        .video-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #333333;
+        }
+
+        /* KOL Section */
+        .kol-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .kol-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .kol-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .kol-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .kol-video {
+            width: 100%;
+            height: 400px;
+            background: #F8F9FA;
+            border-radius: 20px 20px 0 0;
+            overflow: hidden;
+        }
+
+        .kol-video iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .kol-content {
+            padding: 0.8rem;
+            text-align: center;
+        }
+
+        .kol-content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0;
+            color: #333333;
+            font-weight: 600;
+        }
+
+        /* Pillars Section */
+        .pillars {
+            padding: 80px 0;
+            background: #F8F9FA;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333333;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            color: #7393BC;
+            font-weight: 500;
+            line-height: 1.6;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .pillar-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #E8F4FF, #7393BC);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: #030C3A;
+        }
+
+        /* Campaign Content Styles */
+        .campaign-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .campaign-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .campaign-column-left,
+        .campaign-column-right {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .campaign-intro {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .campaign-intro h3 {
+            font-size: 2rem;
+            color: #030C3A;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .campaign-description {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+            font-weight: 400;
+        }
+
+        .campaign-article {
+            background: white;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-left: 5px solid #030C3A;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .campaign-article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .campaign-article h4 {
+            font-size: 1.5rem;
+            color: #333333;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .campaign-article p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .campaign-article p:last-child {
+            margin-bottom: 0;
+        }
+
+        .campaign-conclusion {
+            background: linear-gradient(135deg, #E8F4FF 0%, #7393BC 100%);
+            color: #030C3A;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(232, 244, 255, 0.3);
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .campaign-conclusion h4 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: #333333;
+            font-weight: 600;
+        }
+
+        .campaign-conclusion p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+
+        .campaign-conclusion p:last-child {
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #E8F4FF, #7393BC);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #030C3A;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .feature-content h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #333333;
+        }
+
+        .feature-content p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 80px 0;
+            background: #E8F4FF;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-content {
+            padding: 1.5rem;
+            width: 100%;
+        }
+
+        .product-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: #333333;
+        }
+
+        .product-description {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .product-features {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .product-price {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .sale-price {
+            color: #006CD9;
+        }
+
+        .regular-price {
+            text-decoration: line-through;
+            color: #999;
+        }
+
+        .discount {
+            background-color: #FF4D4D;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .product-cta {
+            display: inline-block;
+            background: linear-gradient(45deg, #E8F4FF, #030C3A);
+            color: #E8F4FF;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(232, 244, 255, 0.2);
+        }
+
+        .product-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(3, 12, 58, 0.3);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #E8F4FF 0%, #7393BC 100%);
+            color: #030C3A;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        /* MoodBoard Section */
+        .moodboard-section {
+            padding: 80px 0;
+            background: #F8F9FA;
+        }
+
+        .moodboard-description {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .moodboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .moodboard-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            aspect-ratio: 1;
+            cursor: pointer;
+        }
+
+        .moodboard-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .moodboard-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .moodboard-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .moodboard-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            color: white;
+            padding: 2rem 1rem 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            opacity: 0;
+            transition: all 0.4s ease;
+            transform: translateY(20px);
+        }
+
+        .moodboard-item:hover .moodboard-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .moodboard-label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            background: linear-gradient(45deg, #E8F4FF, #7393BC);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            color: #030C3A;
+            letter-spacing: 0.5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* 特殊样式：用户分享图片 */
+        .moodboard-item.user-share {
+            border: 3px solid transparent;
+            background: linear-gradient(45deg, #E8F4FF, #7393BC);
+            padding: 3px;
+        }
+
+        .moodboard-item.user-share img {
+            border-radius: 17px;
+        }
+
+        /* 特殊样式：产品展示图片 */
+        .moodboard-item.product-showcase {
+            border: 3px solid transparent;
+            background: linear-gradient(45deg, #030C3A, #E8F4FF);
+            padding: 3px;
+        }
+
+        .moodboard-item.product-showcase img {
+            border-radius: 17px;
+        }
+
+        /* Footer */
+        footer {
+            background: #030C3A;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #030C3A;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #030C3A;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            /* 测试样式 - 确保媒体查询工作 */
+            body::before {
+                content: "手机端样式已加载";
+                position: fixed;
+                top: 10px;
+                right: 10px;
+                background: red;
+                color: white;
+                padding: 5px;
+                z-index: 9999;
+                font-size: 12px;
+            }
+
+            /* 强制改变背景色测试 */
+            body {
+                background-color: #f0f8ff !important;
+            }
+
+            .hero-video {
+                height: 100vh;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content .tagline {
+                font-size: 1.2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .video-container iframe {
+                height: 300px;
+            }
+
+            /* 手机端紧凑布局 - 强制覆盖原始样式 */
+            .kol-section .kol-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 1rem !important;
+            }
+
+            .kol-section .kol-video {
+                height: 200px !important;
+            }
+
+            .kol-section .kol-content {
+                padding: 0.5rem !important;
+            }
+
+            .kol-section .kol-content h4 {
+                font-size: 0.9rem !important;
+            }
+
+            .products-section .products-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 1rem !important;
+            }
+
+            .products-section .product-card {
+                margin-bottom: 0 !important;
+            }
+
+            .products-section .product-image {
+                height: 180px !important;
+            }
+
+            .products-section .product-content {
+                padding: 1rem !important;
+            }
+
+            .products-section .product-content h3 {
+                font-size: 1.4rem !important;
+                margin-bottom: 0.5rem !important;
+            }
+
+            .products-section .product-description {
+                font-size: 0.9rem !important;
+                margin-bottom: 0.8rem !important;
+            }
+
+            .products-section .product-features {
+                gap: 0.5rem !important;
+                margin-bottom: 0.8rem !important;
+            }
+
+            .products-section .product-features span {
+                font-size: 0.8rem !important;
+                padding: 0.2rem 0.5rem !important;
+            }
+
+            .products-section .product-price {
+                margin-bottom: 1rem !important;
+            }
+
+            .products-section .product-cta {
+                padding: 8px 20px !important;
+                font-size: 0.9rem !important;
+            }
+
+            .pillars .campaign-article {
+                padding: 1.5rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+
+            .pillars .campaign-intro {
+                padding: 1.5rem !important;
+                margin-bottom: 2rem !important;
+            }
+
+            .pillars .campaign-conclusion {
+                padding: 1.5rem !important;
+            }
+
+            .pillars .campaign-columns {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+
+            .moodboard-section .moodboard-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 1rem !important;
+            }
+
+            .moodboard-section .moodboard-item {
+                aspect-ratio: 1 !important;
+            }
+
+            .features .features-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 1.5rem !important;
+            }
+
+            .features .feature-item {
+                gap: 1rem !important;
+            }
+
+            .features .feature-icon {
+                width: 50px !important;
+                height: 50px !important;
+                font-size: 1.2rem !important;
+            }
+
+            .features .feature-content h4 {
+                font-size: 1.1rem !important;
+                margin-bottom: 0.3rem !important;
+            }
+
+            .features .feature-content p {
+                font-size: 0.9rem !important;
+                line-height: 1.4 !important;
+            }
+
+            /* 手机端section间距优化 */
+            .kol-section,
+            .products-section,
+            .pillars,
+            .moodboard-section,
+            .features {
+                padding: 50px 0 !important;
+            }
+
+            .section-title {
+                font-size: 2rem !important;
+                margin-bottom: 2rem !important;
+            }
+
+            .moodboard-description {
+                font-size: 1rem !important;
+                margin-bottom: 2rem !important;
+                line-height: 1.6 !important;
+            }
+
+            .footer-content {
+                flex-direction: column !important;
+                text-align: center !important;
+            }
+
+            /* 手机端卡片样式优化 */
+            .kol-card,
+            .product-card,
+            .campaign-article,
+            .moodboard-item {
+                border-radius: 15px !important;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.08) !important;
+            }
+
+            .kol-card:hover,
+            .product-card:hover,
+            .campaign-article:hover,
+            .moodboard-item:hover {
+                transform: translateY(-3px) !important;
+                box-shadow: 0 8px 20px rgba(0,0,0,0.12) !important;
+            }
+
+            /* 手机端文字优化 */
+            .campaign-article h4 {
+                font-size: 1.3rem !important;
+                margin-bottom: 1rem !important;
+            }
+
+            .campaign-article p {
+                font-size: 1rem !important;
+                line-height: 1.6 !important;
+            }
+
+            .campaign-intro h3 {
+                font-size: 1.6rem !important;
+                margin-bottom: 1rem !important;
+            }
+
+            .campaign-description {
+                font-size: 1rem !important;
+                line-height: 1.6 !important;
+            }
+
+            /* 手机端按钮优化 */
+            .cta-button {
+                padding: 12px 30px !important;
+                font-size: 1.1rem !important;
+            }
+
+            /* 手机端容器优化 */
+            .container {
+                padding: 0 15px !important;
+            }
+
+            /* 手机端网格优化 */
+            .kol-grid,
+            .products-grid,
+            .moodboard-grid,
+            .features-grid {
+                margin-top: 2rem !important;
+            }
+
+            /* 手机端动画优化 */
+            .fade-in-up {
+                animation: fadeInUp 0.6s ease-out !important;
+            }
+
+            /* 手机端悬停效果优化 */
+            .kol-card:hover .kol-video iframe,
+            .product-card:hover .product-image img,
+            .moodboard-item:hover img {
+                transform: scale(1.02) !important;
+            }
+        }
+
+        /* 超小屏幕优化 */
+        @media (max-width: 480px) {
+            .kol-grid,
+            .products-grid,
+            .moodboard-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem !important;
+            }
+            
+            .section-title {
+                font-size: 1.8rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            .container {
+                padding: 0 10px !important;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Theme Quote Section */
+        .theme-quote {
+            padding: 60px 0;
+            background: white;
+            text-align: left;
+            position: relative;
+        }
+
+        .theme-quote::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: linear-gradient(135deg, #E8F4FF 0%, rgba(115, 147, 188, 0.1) 100%);
+            z-index: 1;
+        }
+
+        .theme-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .theme-left {
+            padding-right: 2rem;
+        }
+
+        .theme-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #030C3A;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .theme-description {
+            font-size: 1.2rem;
+            color: #7393BC;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .theme-right {
+            text-align: center;
+        }
+
+        .campaign-quote {
+            position: relative;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+            border: none;
+            background: none;
+        }
+
+        .quote-mark {
+            font-size: 4rem;
+            color: #030C3A;
+            font-weight: 900;
+            line-height: 1;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .quote-text {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #030C3A;
+            line-height: 1.2;
+            display: block;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .quote-subtitle {
+            font-size: 1.3rem;
+            color: #7393BC;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* Responsive for theme quote */
+        @media (max-width: 768px) {
+            .theme-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .theme-left {
+                padding-right: 0;
+            }
+            
+            .theme-title {
+                font-size: 2rem;
+            }
+            
+            .theme-quote {
+                padding: 40px 0;
+            }
+            
+            .quote-mark {
+                font-size: 3rem;
+            }
+            
+            .quote-text {
+                font-size: 1.8rem;
+                line-height: 1.3;
+            }
+            
+            .quote-subtitle {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .quote-mark {
+                font-size: 2.5rem;
+            }
+            
+            .quote-text {
+                font-size: 1.5rem;
+            }
+            
+            .quote-subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">MERACH</div>
+                <nav class="nav-links">
+                    <a href="#home">首页</a>
+                    <a href="#kol">KOL推荐</a>
+                    <a href="#products">热门产品</a>
+                    <a href="#moodboard">MoodBoard</a>
+                    <a href="#pillars">核心理念</a>
+                    <a href="#features">产品特色</a>
+                    <a href="#cta">立即行动</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with TVC Video -->
+    <section id="home" class="hero-video">
+        <div class="video-background">
+            <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                <source src="Video/9CamapginTVC.mp4" type="video/mp4">
+                您的浏览器不支持视频播放。
+            </video>
+        </div>
+    </section>
+
+    <!-- Campaign Theme Quote -->
+    <section class="theme-quote">
+        <div class="container">
+            <div class="theme-content">
+                <div class="theme-left">
+                    <h2 class="theme-title">From Merach's Community</h2>
+                    <p class="theme-description">Discover how our community embraces the Home Gym Lifestyle</p>
+                </div>
+                <div class="theme-right">
+                    <blockquote class="campaign-quote">
+                        <span class="quote-mark">"</span>
+                        <span class="quote-text">Born to break your gym walls, not build them</span>
+                        <span class="quote-mark">"</span>
+                        <div class="quote-subtitle">Home Gym is A Lifestyle · Back to Fitness Itself</div>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KOL Section -->
+    <section id="kol" class="kol-section">
+        <div class="container">
+            <div class="kol-grid">
+                <div class="kol-card fade-in-up">
+                    <div class="kol-video">
+                        <iframe src="https://www.instagram.com/reel/DKuKBQKIlCd/embed/" 
+                                width="100%" height="400" 
+                                frameborder="0" 
+                                scrolling="no" 
+                                allowtransparency="true">
+                        </iframe>
+                    </div>
+                    <div class="kol-content">
+                        <h4>健身达人分享</h4>
+                    </div>
+                </div>
+                
+                <div class="kol-card fade-in-up">
+                    <div class="kol-video">
+                        <iframe src="https://www.instagram.com/reel/DM7kDCNIff3/embed/" 
+                                width="100%" height="400" 
+                                frameborder="0" 
+                                scrolling="no" 
+                                allowtransparency="true">
+                        </iframe>
+                    </div>
+                    <div class="kol-content">
+                        <h4>社区健身分享</h4>
+                    </div>
+                </div>
+                
+                <div class="kol-card fade-in-up">
+                    <div class="kol-video">
+                        <iframe src="https://www.instagram.com/reel/DMnmy9uCtiF/embed/" 
+                                width="100%" height="400" 
+                                frameborder="0" 
+                                scrolling="no" 
+                                allowtransparency="true">
+                        </iframe>
+                    </div>
+                    <div class="kol-content">
+                        <h4>健身挑战</h4>
+                    </div>
+                </div>
+                
+                <div class="kol-card fade-in-up">
+                    <div class="kol-video">
+                        <iframe src="https://www.instagram.com/reel/DNXlZ1rMiKW/embed/" 
+                                width="100%" height="400" 
+                                frameborder="0" 
+                                scrolling="no" 
+                                allowtransparency="true">
+                        </iframe>
+                    </div>
+                    <div class="kol-content">
+                        <h4>家庭健身</h4>
+                    </div>
+                </div>
+                
+                <div class="kol-card fade-in-up">
+                    <div class="kol-video">
+                        <iframe src="https://www.instagram.com/reel/DNGRR_6tFTV/embed/" 
+                                width="100%" height="400" 
+                                frameborder="0" 
+                                scrolling="no" 
+                                allowtransparency="true">
+                        </iframe>
+                    </div>
+                    <div class="kol-content">
+                        <h4>健身成果</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2 class="section-title">什么样的产品使家庭健身成为可能？</h2>
+            <div class="products-grid">
+                <div class="product-card fade-in-up">
+                    <div class="product-image">
+                        <img src="Photo/1.jpg" alt="MERACH NovaWalk W50 WalkPad">
+                    </div>
+                    <div class="product-content">
+                        <h3>MERACH NovaWalk W50 WalkPad</h3>
+                        <p class="product-description">12%自动倾斜，超静音设计，适合家庭健身的专业跑步机</p>
+                        <div class="product-features">
+                            <span>12%自动倾斜</span>
+                            <span>超静音25dB</span>
+                            <span>承重181kg</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="sale-price">€369.99</span>
+                            <span class="regular-price">€559.99</span>
+                            <span class="discount">-34%</span>
+                        </div>
+                        <a href="https://merachfit.eu/products/merach-w50-treadmill" target="_blank" class="product-cta">立即购买</a>
+                    </div>
+                </div>
+                
+                <div class="product-card fade-in-up">
+                    <div class="product-image">
+                        <img src="Photo/2.jpg" alt="MERACH T12B1 3-in-1 Treadmill">
+                    </div>
+                    <div class="product-content">
+                        <h3>MERACH T12B1 3-in-1 Treadmill</h3>
+                        <p class="product-description">3档倾斜调节，5层减震系统，智能追踪的折叠跑步机</p>
+                        <div class="product-features">
+                            <span>3档倾斜</span>
+                            <span>5层减震</span>
+                            <span>智能追踪</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="sale-price">€549.99</span>
+                            <span class="regular-price">€699.99</span>
+                            <span class="discount">-21%</span>
+                        </div>
+                        <a href="https://merachfit.eu/products/merach-t12b1-treadmill" target="_blank" class="product-cta">立即购买</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MoodBoard Section -->
+    <section id="moodboard" class="moodboard-section">
+        <div class="container">
+            <h2 class="section-title">Home Gym Lifestyle MoodBoard</h2>
+            <p class="moodboard-description">感受来自Merach社区的健身氛围，体验Home Gym Lifestyle的独特魅力</p>
+            <p class="moodboard-description">Home as gym- Small steps everyday- Fitness in comfort 
+                <br> Keep going spirit- Self-care & wellness- Inner strength
+                <br> Easy start- No excuses- Step by step progress
+                <br> Restart anytime- Progressive journey- Sustainable fitness
+            </p>
+            <div class="moodboard-grid">
+                <!-- 用户分享图片 -->
+                <div class="moodboard-item user-share fade-in-up">
+                    <img src="Photo/人1.jpg" alt="用户健身分享" loading="lazy">
+                    <div class="moodboard-overlay">
+                        <span class="moodboard-label">Community Share</span>
+                    </div>
+                </div>
+                
+                <div class="moodboard-item product-showcase fade-in-up">
+                    <img src="Photo/1.jpg" alt="Merach产品展示" loading="lazy">
+                    <div class="moodboard-overlay">
+                        <span class="moodboard-label">Product Showcase</span>
+                    </div>
+                </div>
+                
+                <div class="moodboard-item user-share fade-in-up">
+                    <img src="Photo/人2.jpg" alt="用户健身分享" loading="lazy">
+                    <div class="moodboard-overlay">
+                        <span class="moodboard-label">Community Share</span>
+                    </div>
+                </div>
+                
+                <div class="moodboard-item product-showcase fade-in-up">
+                    <img src="Photo/2.jpg" alt="Merach产品展示" loading="lazy">
+                    <div class="moodboard-overlay">
+                        <span class="moodboard-label">Product Showcase</span>
+                    </div>
+                </div>
+                
+                <div class="moodboard-item product-showcase fade-in-up">
+                    <img src="Photo/3.jpg" alt="Merach产品展示" loading="lazy">
+                    <div class="moodboard-overlay">
+                        <span class="moodboard-label">Product Showcase</span>
+                    </div>
+                </div>
+                
+                <div class="moodboard-item user-share fade-in-up">
+                    <img src="Photo/人3.jpg" alt="用户健身分享" loading="lazy">
+                    <div class="moodboard-overlay">
+                        <span class="moodboard-label">Community Share</span>
+                    </div>
+                </div>
+                
+                <div class="moodboard-item product-showcase fade-in-up">
+                    <img src="Photo/4.jpg" alt="Merach产品展示" loading="lazy">
+                    <div class="moodboard-overlay">
+                        <span class="moodboard-label">Product Showcase</span>
+                    </div>
+                </div>
+                
+                <div class="moodboard-item user-share fade-in-up">
+                    <img src="Photo/人4.jpg" alt="用户健身分享" loading="lazy">
+                    <div class="moodboard-overlay">
+                        <span class="moodboard-label">Community Share</span>
+                    </div>
+                </div>
+                
+                <div class="moodboard-item product-showcase fade-in-up">
+                    <img src="Photo/5.jpg" alt="Merach产品展示" loading="lazy">
+                    <div class="moodboard-overlay">
+                        <span class="moodboard-label">Product Showcase</span>
+                    </div>
+                </div>
+                
+                <div class="moodboard-item product-showcase fade-in-up">
+                    <img src="Photo/6.jpg" alt="Merach产品展示" loading="lazy">
+                    <div class="moodboard-overlay">
+                        <span class="moodboard-label">Product Showcase</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pillars Section -->
+    <section id="pillars" class="pillars">
+        <div class="container">
+            <h2 class="section-title">Born to break your gym walls, not build them</h2>
+            <div class="campaign-content">
+                <div class="campaign-intro fade-in-up">
+                    <h3>Home Gym Lifestyle · Back to Fitness</h3>
+                    <p class="campaign-description">
+                        在2024年9月，Merach发起了一场前所未有的品牌运动，我们不仅仅是在销售健身器材，更是在传递一种全新的生活方式理念。
+                        "Born to break your gym walls, not build them" 这句话承载着我们对传统健身观念的挑战和对家庭健身未来的憧憬。
+                    </p>
+                </div>
+                
+                <div class="campaign-columns">
+                    <div class="campaign-column-left">
+                        <div class="campaign-article fade-in-up">
+                            <h4>🏠 Daily Routine（日常融入）</h4>
+                            <p>
+                                我们相信，真正的健身不应该被时间和空间所限制。传统的健身房模式要求人们必须在特定时间前往特定地点，
+                                这种模式往往成为坚持健身的障碍。Home Gym Lifestyle 的核心在于将健身融入日常生活，
+                                让家成为你的专属健身房。无论是清晨的15分钟快走，还是工作间隙的简单拉伸，
+                                健身不再是生活的额外负担，而是生活的一部分。我们倡导"Small steps everyday"的理念，
+                                每天的小进步累积起来，就是巨大的改变。
+                            </p>
+                        </div>
+                        
+                        <div class="campaign-article fade-in-up">
+                            <h4>💪 Emotional Motivation（情感激励）</h4>
+                            <p>
+                                健身不仅仅是身体的锻炼，更是心灵的修炼。在家庭环境中，我们更容易找到内心的平静和专注。
+                                "Keep going spirit" 是我们希望传递给每一位用户的精神内核。每一次在家庭健身器材上的坚持，
+                                都是对自我意志的考验和提升。我们相信，真正的健康来自于身心的和谐统一，
+                                而家庭健身环境能够提供这种和谐所需的私密性和安全感。
+                                通过"Self-care & wellness"的理念，我们鼓励用户将健身视为对自己的一种关爱和投资。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="campaign-column-right">
+                        <div class="campaign-article fade-in-up">
+                            <h4>🚀 Accessible Fitness（轻松无门槛）</h4>
+                            <p>
+                                健身不应该有门槛，每个人都应该有追求健康生活的权利。Home Gym Lifestyle 打破了传统健身房的种种限制：
+                                高昂的会员费、复杂的器械操作、拥挤的环境、固定的营业时间。我们提供的是"Easy start"的健身解决方案，
+                                让每个人都能在自己的节奏中找到适合的健身方式。"No excuses" 是我们的态度，
+                                因为当健身就在家里时，所有的借口都不再成立。无论是健身新手还是资深爱好者，
+                                都能在我们的产品中找到属于自己的健身路径。
+                            </p>
+                        </div>
+                        
+                        <div class="campaign-article fade-in-up">
+                            <h4>📈 Progressive Journey（逐步进步）</h4>
+                            <p>
+                                健身是一场没有终点的旅程，而家庭健身让这场旅程变得更加灵活和可持续。
+                                "Back to fitness" 不仅仅是一个口号，更是我们对那些曾经中断健身的人们的鼓励。
+                                生活中有太多不可预见的因素可能打断我们的健身计划，但家庭健身让我们能够"Restart anytime"，
+                                随时重新开始。我们相信，每一次重新开始都是进步，每一次坚持都是胜利。
+                                通过"Step by step progress"的方式，我们帮助用户建立可持续的健身习惯，
+                                让健身成为伴随一生的生活方式。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="campaign-conclusion fade-in-up">
+                    <h4>🌟 为什么选择Home Gym Lifestyle？</h4>
+                    <p>
+                        在这个快节奏的时代，我们需要的不是更多的约束，而是更多的自由和可能性。
+                        Home Gym Lifestyle 代表着一种全新的健身哲学：它打破了传统健身的围墙，
+                        让健身变得更加自由、灵活和个性化。我们相信，真正的健身不应该被场所限制，
+                        不应该被时间束缚，更不应该被传统观念所禁锢。
+                    </p>
+                    <p>
+                        通过这次9月campaign，我们邀请每一位用户重新思考健身的意义，
+                        重新定义健康生活的边界。让我们一起"break your gym walls"，
+                        在家庭这个最温暖、最私密的空间里，开启属于自己的健身革命。
+                        因为，我们生来就是为了打破界限，而不是建造围墙。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">为什么选择Merach产品？</h2>
+            <p class="section-subtitle">我们不只是卖健身器材，我们创造一种全新的生活方式</p>
+            
+            <div class="features-grid">
+                <div class="feature-item fade-in-up">
+                    <div class="feature-icon">🏠</div>
+                    <div class="feature-content">
+                        <h4>空间革命：让健身房走进家庭</h4>
+                        <p>W50走步机的折叠设计让客厅瞬间变身跑步区，R50划船机的紧凑结构让阳台成为划船中心。我们重新定义了家庭空间的可能性，让每一平米都能承载健身梦想。</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item fade-in-up">
+                    <div class="feature-icon">⏰</div>
+                    <div class="feature-content">
+                        <h4>时间自由：24/7专属健身房</h4>
+                        <p>不再被健身房营业时间束缚，不再为通勤时间焦虑。Merach产品让你随时开始训练，深夜的灵感、清晨的动力，都能立即转化为行动。</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item fade-in-up">
+                    <div class="feature-icon">🎯</div>
+                    <div class="feature-content">
+                        <h4>专业体验：健身房级别的训练效果</h4>
+                        <p>W50的减震系统让家庭跑步更安全，R50的水阻设计模拟真实划船感受。我们让专业训练不再需要专业场地，家庭也能达到健身房的效果。</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item fade-in-up">
+                    <div class="feature-icon">💪</div>
+                    <div class="feature-content">
+                        <h4>心理舒适：私密空间的力量</h4>
+                        <p>在熟悉的环境中训练，没有陌生人的目光，没有比较的压力。Merach产品创造了一个安全、私密的健身空间，让每个人都能专注于自己的进步。</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item fade-in-up">
+                    <div class="feature-icon">🔄</div>
+                    <div class="feature-content">
+                        <h4>生活融合：健身成为日常习惯</h4>
+                        <p>W50和R50不仅仅是健身器材，更是生活方式的载体。它们让健身从"要去健身房"变成"就在家里"，从"计划中的事情"变成"生活的一部分"。</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item fade-in-up">
+                    <div class="feature-icon">🌟</div>
+                    <div class="feature-content">
+                        <h4>未来趋势：重新定义健身边界</h4>
+                        <p>我们不是在卖产品，我们在创造一种可能：让每个人都能拥有专属的健身空间，让健身不再受限于场所，让健康生活真正融入家庭。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="cta-section">
+        <div class="container">
+            <h2>准备好打破健身的界限了吗？</h2>
+            <p>加入Merach，让家成为你的专属健身房</p>
+            <a href="#" class="cta-button">立即咨询</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">MERACH</div>
+                <div class="social-links">
+                    <a href="#">📱</a>
+                    <a href="#">📧</a>
+                    <a href="#">🌐</a>
+                </div>
+            </div>
+            <div style="margin-top: 2rem; opacity: 0.7;">
+                <p>&copy; 2024 Merach. All rights reserved. | Home Gym Lifestyle · Back to Fitness</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with fade-in-up class
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+            observer.observe(el);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(232, 244, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #E8F4FF 0%, #030C3A 100%)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+    </script>
+</body>
+</html> 
